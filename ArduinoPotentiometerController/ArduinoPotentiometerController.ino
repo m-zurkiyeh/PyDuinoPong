@@ -9,10 +9,10 @@ String data;
 Thread p1LED = Thread();
 Thread p2LED = Thread();
 
+
 void flashP1LED();
 void flashP2LED();
 void signal();
-
 
 
 void setup() {
@@ -60,9 +60,18 @@ void loop() {
   delay(50);
 }
 
+/**
+ * Turns P1 LED ON/OFF based on the p1LED thread function being enabled or not
+ * @return void
+*/
 void flashP1LED() {
   digitalWrite(player1LED, p1LED.enabled);
 }
+
+/**
+ * Turns P2 LED ON/OFF based on the p2LED thread function being enabled or not
+ * @return void
+*/
 void flashP2LED() {
   digitalWrite(player2LED, p2LED.enabled);
 }

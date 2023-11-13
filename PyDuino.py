@@ -1,5 +1,4 @@
 import serial
-import time
 import threading
 import sys
 
@@ -25,10 +24,10 @@ class PyDuino:
     Default Constructor for the PyDuino Class
     """
     
-    self.arduino = serial.Serial(self.port,9600) #DO NOT CHANGE
+    self.arduino = serial.Serial(self.port,9600) 
     self.t1 = threading.Thread(target = self.writeToSerial)
     self.t1.daemon = True
-    self.exit_flag = False
+    self.exit_flag = False                                  # * DO NOT ALTER 
     self.pot1 = 0
     self.pot2 = 0
 
@@ -36,14 +35,13 @@ class PyDuino:
    
  def endThread(self): 
     """
-    Ends thread responsible for reading from serial
+    * Ends thread responsible for reading from serial
     """
     self.exit_flag = True
 
  def readSerial(self):
     """
-    Reads the numbers outputted from Arduino Serial and Converts
-    the output into 2 int variables for the paddle's movements
+    * Reads the numbers outputted from Arduino Serial and Converts the output into 2 int variables for the paddle's movements
     """
     while not self.exit_flag:
       potVals = str(self.arduino.readline(),'utf-8').split(",") # Converts the Arduino's Serial Output into a list
@@ -51,7 +49,7 @@ class PyDuino:
       self.pot1 = int(potVals[0]) # The list is then indexed and parsed into values that will be used to move the paddles
       self.pot2 = int(potVals[1])
       
-      sys.stdout.flush() # Cleans internal buffer
+      sys.stdout.flush() # * Cleans internal buffer
 
  
  def get_pot1(self) -> int:
