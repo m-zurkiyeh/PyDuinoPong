@@ -1,5 +1,9 @@
 # ﻿PyDuino Pong
-A clone of Pong programmed in Python using Pygame that also utilizes arduino via the `serial` class that is imported in PyDuino.py
+![Static Badge](https://img.shields.io/badge/python-3.7-blue) ![Static Badge](https://img.shields.io/badge/arduino-green)
+
+
+A clone of Pong programmed in Python using Pygame that also utilizes arduino via the `serial` class that is imported in PyDuino.py 
+
 
 
 ![](/imgs/Ingenious%20Snaget.png)
@@ -10,7 +14,7 @@ A clone of Pong programmed in Python using Pygame that also utilizes arduino via
 - Pygame
 - Arduino 
 
-### Installation
+## Installation
 1. Install Pygame using the terminal command ```pip install pygame```
 1. Install the ArduinoThreads Library by Ivan Seide
 1. Set the python interpreter to 3.7.0 for pygame to work
@@ -28,10 +32,10 @@ If this is the case for you: then you can change the variable `port = "COM5"` lo
 
 **Please keep in mind to leave the 9600 value as is in** `self.arduino = serial.Serial(self.port,9600)` **as the value represents the baud rate necessary for the program to communicate with the arduino board**
 
-### How to Run
+## How to Run
 Make sure the arduino code is verified and successfully uploaded to the board and Just run `python3 main.py` on a terminal
 
-### Features
+## Features
 1. Using the arduino potentiometers to move the paddles
     - The program gets a hold of the values by reading the serial output coming from the arduino in which its uploaded sketch contains this code:
    ```
