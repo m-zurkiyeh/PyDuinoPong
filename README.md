@@ -1,5 +1,5 @@
 # ﻿PyDuino Pong
-![Static Badge](https://img.shields.io/badge/python-3.7-blue) ![Static Badge](https://img.shields.io/badge/arduino-green)
+![Static Badge](https://img.shields.io/badge/python-3.7-blue) ![Static Badge](https://img.shields.io/badge/Arduino-grey?logo=arduino)
 
 
 A clone of Pong programmed in Python using Pygame that also utilizes arduino via the `serial` class that is imported in PyDuino.py 
